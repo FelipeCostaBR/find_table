@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server/routes.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/FelipeCostaBR/find_table/issues"
   },
-  "homepage": "https://github.com/FelipeCostaBR/find_table#readme"
+  "homepage": "https://github.com/FelipeCostaBR/find_table#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
