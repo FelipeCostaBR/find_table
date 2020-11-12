@@ -19,7 +19,8 @@
   "homepage": "https://github.com/FelipeCostaBR/find_table#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pg": "^8.5.0"
+    "pg": "^8.5.0",
+    "requestify": "^0.2.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
