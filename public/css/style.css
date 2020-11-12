@@ -1,0 +1,25 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .map-container{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+      }
+
+      .resturant-details {
+        background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%)
+      }
+
