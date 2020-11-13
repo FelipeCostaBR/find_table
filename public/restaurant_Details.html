@@ -4,10 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./css/detail.css" />
 </head>
 <body>
-    <h2>RESTAURANT DETAILS</h2>
+    <header>
+        <div class="title">
+        <h2>RESTAURANT DETAILS</h2>
+        </div>
+        <img class="logo" src="Burger_Finder.png" alt="logo">
+        <nav>
+            <button>HOME</button>
+            <button>MAP</button>
+        </nav>
+    </header>
+    
+
+    <div class="restaurant-images">
+        <img src="https://decisivecravings.com.au/wp-content/uploads/2015/08/Rocket-Coffee-Bar-counter-Cool-Cafes-in-Bangkok.jpg" alt="image">
+        <img src="https://apicms.thestar.com.my/uploads/images/2020/03/06/593265.jpg" alt="image">
+        <img src="https://i.pinimg.com/originals/03/ff/5d/03ff5d9b0dc90bf7b92aded46aa01538.jpg" alt="image">
+    </div>
+
+    <div class="box-detailpage">
+    <div class="small-box-detailpage">
+
+        <h3>OPENNING HOURS</h3>
+        <div class="opening-hours-list">
+        <ul class="day-detailpage">
+            <li>SUN</li>
+            <li>MON</li>
+            <li>TUE</li>
+            <li>WED</li>
+            <li>THU</li>
+            <li>FRI</li>
+            <li>SAT</li>
+        </ul>
+
+        <ul class="time-detailpage">
+            <li>8:00AM - 9:00PM</li>
+            <li>8:00AM - 9:00PM</li>
+            <li>8:00AM - 9:00PM</li>
+            <li>8:00AM - 9:00PM</li>
+            <li>8:00AM - 9:00PM</li>
+            <li>8:00AM - 9:00PM</li>
+            <li>8:00AM - 9:00PM</li>
+        </ul>
+        </div>
+
+
+        <h3>THE DETAILS</h3>
+        <div class="details-detailpage">
+        <h4>Type</h4>
+        <p>Outdoor Seating</p>
+        <h4>Cuisine</h4>
+        <p>Modern Australian</p>
+        <h4>Servings</h4>
+        <p>Breakfast</p>
+        <p>Lunch</p>
+        <p>Dinner</p>
+        </div>
+    </div>
+
+    <div class="big-box-detailpage">
+    <div class="detail-map">
+        <img src="https://snazzy-maps-cdn.azureedge.net/assets/8007-black-and-white-without-labels.png?v=20170626071756" alt="map">
+    </div>
+
+    <div class="description">
+        <p>The crew from The Kettle Black and Top Paddock have opened up a new café in Melbourne’s CBD, and it’s even open evenings! Propped right on the corner of Little Bourke and Spencer Street, Higher Ground is upping the street cred of Melbourne’s café scene (not that is necessarily needs to). The café has an industrial feel, with the exposed brick walls contrasting the plants and light wooden tables.
+
+            But now to the serious stuff. The menu. Holding true to their signature hotcakes, the team have brought the ricotta hotcakes with maple syrup and fruits straight to Higher Ground. There’s also a lamb sausage roll and wagyu short rib roll for those who love their proteins.</p>
+    </div>
+
+    <div class="booking-table">
+        <form action="">
+            <select name="" id="booking-time">
+                <option >BOOK A TIME HERE</option>
+                <option >8AM - 9AM</option>
+                <option >10AM - 11AM</option>
+                <option >11AM - 12PM</option>
+                <option >12PM - 1PM</option>
+                <option >1PM - 2PM</option>
+                <option >2PM - 3PM</option>
+                <option >3PM - 4PM</option>
+                <option >4PM - 5PM</option>
+                <option >5PM - 6PM</option>
+            </select>
+        </form>
+
+        <form action="">
+            <select name="" id="booking-day">
+                <option >BOOK A DAY HERE</option>
+                <option >SUN</option>
+                <option >MON</option>
+                <option >TUE</option>
+                <option >WED</option>
+                <option >THU</option>
+                <option >FRI</option>
+                <option >SAT</option>
+            </select>
+        </form>
+
+        <button id="submit-btn">SUBMIT</button>
+
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>NOVEMBER 2020</p>
+        
+        CONTACT WITH US
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./restaurant_details.js"></script>
 </body>
