@@ -1,24 +1,24 @@
 let map;
 
-let userLat =  -37.750203899999995
-let userLog = 144.8621315
-
-
 function initMap() {
-  const home = { lat: userLat, lng: userLog }
-    map = new google.maps.Map(document.getElementById("map"), {
-    center: home,
+
+  let home = {
+    center: { lat: -12.750203899999995, lng: 14.8621315 }, // set a default
     zoom: 13,
-  });
-  // set the marker in the home
-  const userMarker = new google.maps.Marker({
-    position: home,
-    map: map
-  })
+  };
+  map = new google.maps.Map(document.getElementById("map"), home);
+  
+  main();
 }
 
-
-
+function addMarker(coords, map) {
+  const userMarker = new google.maps.Marker({
+    position: coords,
+    map: map,
+    icon:
+      "https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png",
+  });
+}
 
 function getPosition() {
   // Simple wrapper
@@ -27,21 +27,23 @@ function getPosition() {
   });
 }
 // wait for getPosition to complete
-
 function main() {
-  getPosition().then((res) => {
-    // userLat = res.coords.latitude
-    // userLog = res.coords.longitude
+  getPosition().then(res => {
+    // change the map location to the current user using browser GPS
+    map.setCenter({lat: res.coords.latitude, lng: res.coords.longitude})
     axios
       .post("/api/user_location", {
         latitude: res.coords.latitude,
         longitude: res.coords.longitude,
-      })
-      // .then((response) => {
-      //   // console.log(response.data);
-      // });
+      }).then(response => {
+        // response with all the restaurants
+        response.data.results.forEach(restaurant => {
+           let coors = restaurant.geometry.location
+          // add a restaurants marker 
+           addMarker(coors, map);
+        })
+      });
   });
 }
 
-main()
 // lat: -37.750203899999995, lng: 144.8621315

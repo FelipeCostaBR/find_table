@@ -20,10 +20,12 @@ app.post('/api/user_location',(request, res) => {
     const { latitude, longitude } = request.body
     // HTTP request to find restaurants location
     // parameters is user current location
-    restaurantsLocation(latitude,longitude )
-     res.send(`${latitude}, ${longitude} `)
-})
+    restaurantsLocation(latitude,longitude).then(response => {
+        // add restaurants tables, use place_id as key
+        res.json(response.data)
 
+    })
+})
 
 app.get('/restaurant', (request, response) => {
     // rendering templates
