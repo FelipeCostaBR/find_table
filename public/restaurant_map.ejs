@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find a table</title>
+    <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=<%= api_key %>&callback=initMap&libraries=&v=weekly"
+    defer
+  ></script> -->
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="map-container">
+      <div class="resturant-details"></div>
+      <div id="map"></div>
+    </section>
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=<%= api_key %> &libraries=geometry&callback=initMap"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
