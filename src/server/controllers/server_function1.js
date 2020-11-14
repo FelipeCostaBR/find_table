@@ -1,6 +1,7 @@
 const { Pool } = require('pg')
 const pool = new pool ({database: ''})
 
+
 module.exports = {
         create: (req, res) => {
         const sql = 'insert into () values $1;'

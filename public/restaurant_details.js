@@ -14,3 +14,5 @@ function initMap() {
         map: map
     })
 }
+
+var location = document.querySelector()
