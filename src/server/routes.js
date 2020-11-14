@@ -23,7 +23,6 @@ app.post('/api/user_location',(request, res) => {
     restaurantsLocation(latitude,longitude).then(response => {
         // add restaurants tables, use place_id as key
         res.json(response.data)
-
     })
 })
 
@@ -31,6 +30,10 @@ app.get('/restaurant', (request, response) => {
     // rendering templates
     response.render('restaurant_map', {api_key: api_key})
 });
+
+app.get('/restaurant/details', (request, response) => {
+    response.render('restaurant_details')
+})
 
 // path to open the index.html in the browser
 // http://localhost:3333/index.html
