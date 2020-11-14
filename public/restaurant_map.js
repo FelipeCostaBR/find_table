@@ -54,9 +54,13 @@ function createRestaurantList(restaurant) {
   name.innerHTML = `Name: ${restaurant.name}`
   
 
-  let status = document.createElement("p")
-  status.className= 'restaurant-status'
-  status.innerHTML = `Status: ${restaurant.opening_hours.open_now}`
+  let openNow = document.createElement("p")
+  openNow.className= 'restaurant-open-now'
+   // check if opening hours is not defined
+    restaurant.opening_hours.open_now
+    ? openNow.innerHTML = `Open now: ${restaurant.opening_hours.open_now}`
+    : openNow.innerHTML = `Open now: ${false}`
+  
 
   let rating = document.createElement("p")
   rating.className= 'restaurant-rating'
@@ -67,7 +71,7 @@ function createRestaurantList(restaurant) {
   vicinity.innerHTML = `Address: ${restaurant.vicinity}`
 
   restaurantList.appendChild(name)
-  restaurantList.appendChild(status)
+  restaurantList.appendChild(openNow)
   restaurantList.appendChild(rating)
   restaurantList.appendChild(vicinity)
 }
@@ -75,7 +79,6 @@ function createRestaurantList(restaurant) {
 // wait for getPosition to complete
 function main() {
   getPosition().then((res) => {
-
     const { latitude, longitude } = res.coords;
     // change the map location to the current user using browser GPS
     map.setCenter({ lat: latitude, lng: longitude });
