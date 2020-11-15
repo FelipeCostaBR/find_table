@@ -52,3 +52,41 @@ app.listen(3333);
 // PLaces API: Pl9AIzaSyD4AHUaAEtY1X5EpSfn8bPZW1SwVMqBpG4
 
 // maps javascript API: AIzaSyDgyjupXJdzaQcPUB66eGDY8VcjZLwTT8M
+
+//NEW DETAILS TO BE ADDED TO ORIGINAL PROJECT
+
+//open info window within map
+
+function init() {
+    const Sydney = { lat: -33.868820, lng: 151.209290 }
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        mapTypeId: "satellite",
+        center: Sydney,
+        heading: 90,
+        tilt: 45
+    })
+    map.setTilt(45)
+
+    const string = '<p>Sample text about how appealing Sydney is.</p>'
+    const infoWindow = new google.maps.Infowindow({ content: string })
+    const marker = new google.maps.Marker({
+        position: Sydney,
+        map,
+        title: 'Sydney'
+    });
+    marker.addEventListener('click', () => {
+        infoWindow.open(map, marker);
+    });
+}
+
+function rotate90() {
+    const heading = map.getHeading() || 0;
+    map.setHeading(heading + 90);
+}
+
+function autoRotate() {
+    if (map.Tilt() !==0) {
+        window.setInterval(rotate90, 3000);
+    }
+}
