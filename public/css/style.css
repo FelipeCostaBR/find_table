@@ -2,6 +2,8 @@
        * element that contains the map. */
        #map {
         height: 100%;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(60%);
       }
       
       /* Optional: Makes the sample page fill the window. */
@@ -28,5 +30,24 @@
       .restaurant-list {
         background-color: #2ea9c2;
       }
+
+      
+
+      .gm-style-iw-d {
+        background-color: rgb(223, 223, 223);
+        color: #693e4b;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        margin: 0;
+        padding: 5px 10px 5px 10px;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-radius: 10px;
+      }
+
+      
+
+      
+      
+      
 
     

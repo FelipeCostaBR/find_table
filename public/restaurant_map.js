@@ -27,12 +27,13 @@ function addMarker(props) {
 
     // check name
     if(props.name) {
-     var infoWindow = new google.maps.InfoWindow({
-        content: props.name
-      })
-      marker.addListener('click', () => {
-        infoWindow.open(props.map, marker)
-      })
+      // var currenetMousover = 
+      var infoWindow = new google.maps.InfoWindow({
+          content: props.name
+        })
+        marker.addListener('mouseover', () => {
+          infoWindow.open(props.map, marker)
+        })
     }
 }
 
