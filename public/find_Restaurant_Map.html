@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Find a table</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./css/Burger_Finder.png">
+  </head>
+  <body>
+    <section class="map-container">
+      <div class="restaurant-details">
+        <form>
+          <input type="text" id="search-term" placeholder="Search..." src="https://www.google.com/maps/embed/v1/search?q=restaurants%20near%20me&key=AIzaSyDgyjupXJdzaQcPUB66eGDY8VcjZLwTT8M&libraries=places&callback=placesSearch"> 
+        </form>
+      </div>
+
+    </section>
+    <div id="map"></div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>    
+  </body>
+</html>
