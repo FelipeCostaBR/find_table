@@ -102,6 +102,10 @@
                 <option >THU</option>
                 <option >FRI</option>
                 <option >SAT</option>
+                <option><% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
+                    <li><%= day %> </li>
+                   <%
+               }) %></option>
             </select>
         </form>
   
