@@ -1,8 +1,10 @@
 // Create the routes for the pages
 const express = require("express");
 const app = express();
-// const { Pool } = require("pg");
-// const pool = new Pool({ database: "todo_app" });
+const path = require('path');
+
+app.use(express.static(path.join( 'public'))); 
+
 app.set('views', './public')
 app.set('view engine', 'ejs')
 
@@ -10,26 +12,20 @@ const { restaurantsLocation } = require('./controllers/restaurant_controller')
 const { restaurantsDetails } = require('./controllers/restaurant_controller')
 
 let bodyParser = require('body-parser');
-
-
-app.use(express.static("public"))
 app.use(bodyParser.json())
 
 
 app.post('/api/user_location',(request, response) => {
     const { latitude, longitude } = request.body
-    // HTTP request to find restaurants location
     // parameters is user current location
     restaurantsLocation(latitude,longitude).then(res => {
         response.json(res.data)
     })
 })
 
-
 app.get('/restaurant/details/:place_id',(request, response) => { 
     const { place_id } = request.params
     if(!place_id.includes('.')){
-        // HTTP request to find restaurants info
        // parameters is place id from front-end
        restaurantsDetails(place_id).then(res => {
            response.render('restaurant_details',{restaurantsInfo: res.data.result})

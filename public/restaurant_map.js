@@ -36,7 +36,6 @@ function addMarker(props) {
     marker.addListener("mouseover", () => {
       infoWindow.open(props.map, marker);
     });
-
     // google.maps.event.addListener(infoWindow, "domready", function () {
     //   restaurantDetails();
     // });
@@ -118,9 +117,11 @@ function main() {
             coords: RestaurantCoors,
             map,
             iconImage,
+            // create a form with button to redirect to the restaurant details
+            //create a data-id with place_id
             name: restaurantDetailsForm(restaurant),
           });
-          // Add Restaurant list
+          //list of Restaurant
           createRestaurantList(restaurant);
         });
       });

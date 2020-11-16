@@ -1,127 +1,315 @@
+<style>
+  /******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 5%;
+}
 
+.restaurant-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    background-color: black;
+    color: cornsilk;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin: 40px; 
+    border-radius: 20px;
+    box-shadow: #111 0 0 20px;
+  }
+ .restaurant-images img {
+    width: 100%;
+} 
 
-    <title>Find a table</title>
-    <link href="./css/detail.css" rel="stylesheet" type="text/css">
-  <body>
-    <header>
-        <div class="title">
-        <h2><%= restaurantsInfo.name%></h2>
-        </div>
-        <img class="logo" src="../src/assets/images/Burger_Finder.png" alt="logo">
-        <nav>
-            <button>HOME</button>
-            <button>MAP</button>
-        </nav>
-    </header>
+/******************************************
+/* GRIDS STYLES
+/*******************************************/
+  .opening-hours-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .small-box-detailpage {
     
+  }
+
+  .big-box-detailpage {
+    
+  }
+
+  .box-detailpage {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 12%; 
+  }
+
+  li {
+    padding: 10px;
+    color: gray;
+  }
+  li:hover{
+      color: black;
+  }
+  .details-detailpage {
+    padding: 10%;
+    color: gray;
+  }
+  .details-detailpage:hover {
+      color: #693e4b;
+      background-color: #c8c8c8;
+  }
+
+  .description {
+      padding: 10%;
+      font-size: 20px;
+      color: rgb(73, 73, 73);
+  }
+  h4 {
+      color: black;
+  }
+
+  /******************************************
+/* DROPDOWNS AND BTN
+/*******************************************/
+#booking-time {
+    color: #6b6b6c;
+    font-size: 30px;
+    background: #fff;
+    border: 1px solid #111;
+    padding: 0px 30px;
+    display: inline-block;
+    width: 680px;
+    margin: 10px 50px 10px 150px;
+    font-family: helvetica, arial, sans-serif;
+    height: 60px;
+    line-height: 74px;
+    vertical-align: middle;
+    box-shadow: #111 0 0 10px;
+}
+
+#booking-time:hover {
+    background: #ececec;
+}
+
+
+#booking-day {
+    color: #6b6b6c;
+    font-size: 30px;
+    background: #fff;
+    border: 1px solid #111;
+    padding: 0px 30px;
+    display: inline-block;
+    width: 680px;
+    margin: 10px 50px 10px 150px;
+    font-family: helvetica, arial, sans-serif;
+    height: 60px;
+    line-height: 74px;
+    vertical-align: middle;
+    box-shadow: #111 0 0 20px;
+}
+#booking-day:hover {
+    background: #ececec;
+}
+
+#submit-btn {
+    color: #6b6b6c;
+    font-size: 30px;
+    background: rgb(180, 180, 180);
+    border: 1px solid #111;
+    padding: 0px 30px;
+    display: inline-block;
+    width: 680px;
+    margin: 10px 50px 10px 150px;
+    font-family: helvetica, arial, sans-serif;
+    height: 60px;
+    line-height: 74px;
+    vertical-align: middle;
+    box-shadow: #111 0 0 20px;
+}
+
+#submit-btn:hover {
+    background: #693e4b;
+    color: rgb(230, 230, 230);
+  }
+
+
+.detail-map {
+    margin: 30px 20px 10px 150px;
+    width: 48%;
+    border: 2px solid #693e4b;
+    border-radius: 10px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(85%);
+}
+ /******************************************
+/* HEADER STYLE
+/*******************************************/
+.title {
+    border:5px solid #693e4b;
+    box-shadow: #111 0 0 5px;
+    border-radius: 10px;
+    color: black;
+    margin: 10px;
+    padding: 1px;
+    padding-left: 20px;
+}
+.logo {
+    width: 60px;
+    margin-left: 20px;
+    
+    
+}
+
+nav button{
+    background-color: white;
+    padding: 20px;
+    font-size: 20px;
+    border: gray solid 1px;
+    color: gray;
+}
+nav {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+h3 {
+    margin: 30px;
+}
+
+/******************************************
+/* FOOTER STYLE
+/*******************************************/
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 60px;
+    padding: 20px;
+    border-top: 1px solid gray;
+    font-size: 12px;
+    color: gray;
+}
+footer img {
+    position: relative;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+</style>
+
+<title>Find a table</title>
+
+<link href="/public/css/detail.css" rel="stylesheet" type="text/css" />
+<body>
+  <header>
+    <div class="title">
+      <h2><%= restaurantsInfo.name%></h2>
+    </div>
+    <img class="logo" src="./images/Burger_Finder.png" alt="logo" />
+    <nav>
+      <a href="/restaurant_map.html"><button>BACK</button></a>
+    </nav>
+  </header>
+
   <!-- <%= restaurantsInfo.reviews[0].text %> 
   <%= restaurantsInfo.reviews[0].rating %>  -->
-    <div class="restaurant-images">
-        <% restaurantsInfo.photos.forEach(photo => { %>
-             <img src="<%= `https://maps.googleapis.com/maps/api/place/photo?maxwidth=250&maxheight=250&photoreference=${photo.photo_reference}&key=AIzaSyABL4y3J8mON1Db0z4-C-ExwOSZ-W-VHrY` %> " alt="image"> 
-        <% }) %>
-    </div>
-
-    <!-- https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photo.photo_reference&key=AIzaSyABL4y3J8mON1Db0z4-C-ExwOSZ-W-VHrY -->
-  
-    <div class="box-detailpage">
+  <div class="restaurant-images">
+    <% restaurantsInfo.photos.forEach(photo => { %>
+    <img
+      src="<%= `https://maps.googleapis.com/maps/api/place/photo?maxwidth=250&maxheight=250&photoreference=${photo.photo_reference}&key=AIzaSyABL4y3J8mON1Db0z4-C-ExwOSZ-W-VHrY` %> "
+      alt="image"
+    />
+    <% }) %>
+  </div>
+  <div class="box-detailpage">
     <div class="small-box-detailpage">
-  
-        <h3>OPENNING HOURS</h3>
-        <div class="opening-hours-list">
-        <!-- <ul class="day-detailpage">
-            <li>SUN</li>
-            <li>MON</li>
-            <li>TUE</li>
-            <li>WED</li>
-            <li>THU</li>
-            <li>FRI</li>
-            <li>SAT</li>
-        </ul> -->
-  
+      <h3>OPENNING HOURS</h3>
+      <div class="opening-hours-list">
         <ul class="time-detailpage">
-            <% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
-             <li><%= day %> </li>
-            <% }) %>
+          <% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
+          <li><%= day %></li>
+          <% }) %>
         </ul>
-        </div>
-  
-  
-        <h3>THE DETAILS</h3>
-        <div class="details-detailpage">
+      </div>
+
+      <h3>THE DETAILS</h3>
+      <div class="details-detailpage">
         <h4>Type</h4>
-        <%= restaurantsInfo.types %> 
-        </div>
+        <% restaurantsInfo.types.forEach(type => { %>
+        <ul>
+          <li><%= type %></li>
+        </ul>
+        <% }) %>
+      </div>
     </div>
-  
     <div class="big-box-detailpage">
-    <div class="detail-map">
-         <!-- the &q should be the place we need
+      <div class="detail-map">
+        <!-- the &q should be the place we need
         It accepts a location as either a place name, address, or place ID. -->
         <iframe
-            width="600"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBS3C4jLmXkVC7pUgctJFnx4piQF41gN5Y
-                &q=Space+Needle,Seattle+WA" 
-            style="https://developers.google.com/maps/documentation/javascript/styling#styled_map_wizard"
-                allowfullscreen>
+          width="600"
+          height="450"
+          frameborder="0"
+          style="border: 0"
+          src="<%= `https://www.google.com/maps/embed/v1/place?key=AIzaSyBS3C4jLmXkVC7pUgctJFnx4piQF41gN5Y
+            &q=place_id:${restaurantsInfo.place_id}` %>"
+          style="
+            https: //developers.google.com/maps/documentation/javascript/styling#styled_map_wizard;;
+          "
+          allowfullscreen
+        >
         </iframe>
-    </div>
-  
-    <div class="description">
-        <p>The crew from The Kettle Black and Top Paddock have opened up a new café in Melbourne’s CBD, and it’s even open evenings! Propped right on the corner of Little Bourke and Spencer Street, Higher Ground is upping the street cred of Melbourne’s café scene (not that is necessarily needs to). The café has an industrial feel, with the exposed brick walls contrasting the plants and light wooden tables.
-  
-            But now to the serious stuff. The menu. Holding true to their signature hotcakes, the team have brought the ricotta hotcakes with maple syrup and fruits straight to Higher Ground. There’s also a lamb sausage roll and wagyu short rib roll for those who love their proteins.</p>
-    </div>
-  
-    <div class="booking-table">
+      </div>
+      <div class="booking-table">
         <form action="">
-            <select name="" id="booking-time">
-                <option >BOOK A TIME HERE</option>
-                <option >8AM - 9AM</option>
-                <option >10AM - 11AM</option>
-                <option >11AM - 12PM</option>
-                <option >12PM - 1PM</option>
-                <option >1PM - 2PM</option>
-                <option >2PM - 3PM</option>
-                <option >3PM - 4PM</option>
-                <option >4PM - 5PM</option>
-                <option >5PM - 6PM</option>
-            </select>
+          <select name="" id="booking-time">
+            <option>BOOK A TIME HERE</option>
+            <option>8AM - 9AM</option>
+            <option>10AM - 11AM</option>
+            <option>11AM - 12PM</option>
+            <option>12PM - 1PM</option>
+            <option>1PM - 2PM</option>
+            <option>2PM - 3PM</option>
+            <option>3PM - 4PM</option>
+            <option>4PM - 5PM</option>
+            <option>5PM - 6PM</option>
+          </select>
         </form>
-  
+
         <form action="">
-            <select name="" id="booking-day">
-                <option >BOOK A DAY HERE</option>
-                <option >SUN</option>
-                <option >MON</option>
-                <option >TUE</option>
-                <option >WED</option>
-                <option >THU</option>
-                <option >FRI</option>
-                <option >SAT</option>
-            </select>
+          <select name="" id="booking-day">
+            <option>BOOK A DAY HERE</option>
+            <option>SUN</option>
+            <option>MON</option>
+            <option>TUE</option>
+            <option>WED</option>
+            <option>THU</option>
+            <option>FRI</option>
+            <option>SAT</option>
+          </select>
         </form>
-  
+
         <button id="submit-btn">SUBMIT</button>
-  
+      </div>
     </div>
-    </div>
-    </div>
-  
-    <footer>
-        <p>NOVEMBER 2020</p>
-        
-        CONTACT WITH US
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./restaurant_details.js"></script>
-  </body>
-  
-  
-  
-  <!-- {
+  </div>
+
+  <footer>
+    <p>NOVEMBER 2020</p>
+
+    CONTACT WITH US
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="./restaurant_details.js"></script> -->
+</body>
+
+<!-- restaurantInfo obj 
+    {
     html_attributions: [],
     result: {
       address_components: [
