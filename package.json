@@ -2,9 +2,9 @@
   "name": "find_table",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "routes.js",
   "scripts": {
-    "start": "nodemon src/server/routes.js"
+    "start": "nodemon -q main"
   },
   "repository": {
     "type": "git",
