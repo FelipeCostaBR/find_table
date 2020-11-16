@@ -11,17 +11,17 @@
 
 # Find a Table
 
-![Design preview of ](images/screenshots/filename.png)
+![Homepage of Burger Tracker](src/assets/screenshots/app_homepage.png "Burger Tracker Homepage")
 
 ## :wave: Welcome & Introductions!
 
-Welcome to app name! Do check out the project currently hosted right [here](https://hosted-app-link/ "App name").
+Welcome to the Burger Tracker repository! Do check out the project currently hosted right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
 
-App name is a web app with a finder and booking feature that specializes in looking for the best burger places in town! The features of this app utilizes numerous technical components including but not limited to, HTML5, CSS3, vanilla JS, DOM manipulations, APIs and more.
+Burger Tracker is a web app with a finder and booking feature that specializes in looking for the best burger places in town! The features of this app utilizes numerous technical components including but not limited to, HTML5, CSS3, vanilla JS, DOM manipulations, APIs and more.
 
 This project was created as part of the General Assembly software engineering immersive course to challenge us to work in a small team and to put the concepts we've learnt into practice by designing and building a full-stack web app from scratch.
 
-Get "meat-ed" & feedbacks on this project are always welcome!
+Check out the app, get "meat-ed", and feedbacks on this project are always welcome!
 
 ## :pushpin: Objectives of the project
 
@@ -37,8 +37,13 @@ Get "meat-ed" & feedbacks on this project are always welcome!
 
 ## :gear: Technical Components
 
-#### Frontend
-* CSS grid for page layout
+#### Wireframes & User Stories
+* Project design and functionality wireframes **_[here](src/assets/wireframes/ "Wireframes")_**
+
+* User stories and features we worked on **_[here](https://trello.com/b/2VouNg8w/ "Project Board")_**
+
+#### Frontend (Page Layout and User Features)
+* CSS grid
 
 * JS DOM Manipulations and Event Handling
 
@@ -49,27 +54,26 @@ Get "meat-ed" & feedbacks on this project are always welcome!
 
 * Embedded JS Templates _**3.1.5**_
 
-* Node-PostgreSQL Database _**8.5.0**_
-
 ## :calling: Features
 
-* Get a list nearby burger joints based on user's location
+* Get a list nearby burger joints based on user's location.
 
 * Access any one selected burger joints with a table available for booking.
 
 #### To Do:
-
-* Request and access the data of burger joints through Google Maps Places API
+* Request and access the data of burger joints through Google Maps Places API.
 
 * Utilize the data available from Google and create our own search results interface (opening times, restaurant images, etc.)
 
-* Implement a simple table booking system under the restaurant details page that connects to our database
+* Implement a simple booking functionality under the restaurant details page.
 
 ## :inbox_tray: Project Backlog
 
-* Displaying more than 20 search results upon accessing the map page
+* Displaying more than 20 search results upon accessing the map page.
 
-* 
+* A table booking system within the app itself that connects to a database for our app.
+
+* Display the restaurant details page as a single page application (without refreshing the page.
 
 ## :bookmark: Attribution
 
@@ -77,12 +81,12 @@ Get "meat-ed" & feedbacks on this project are always welcome!
 
 ## :camera_flash: Screenshots of the app
 
-#### Screenshot 1 title
-
+#### Map Finder of Burger Tracker
+![Preview of the Map Finder feature](src/assets/screenshots/map_final.gif "Burger Tracker Map")
 <hr />
 
-#### Screenshot 2 title
-
+#### Restaurant Details of Burger Tracker
+![Preview of the restaurant details page]()
 <hr />
 
 ## :memo: Disclaimer
