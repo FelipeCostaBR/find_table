@@ -80,20 +80,24 @@
         </form>
 
         <form action="">
-          <select name="" id="booking-day">
-            <option>BOOK A DAY HERE</option>
-            <option>SUN</option>
-            <option>MON</option>
-            <option>TUE</option>
-            <option>WED</option>
-            <option>THU</option>
-            <option>FRI</option>
-            <option>SAT</option>
-          </select>
+            <select name="" id="booking-day">
+                <option >BOOK A DAY HERE</option>
+                <option >SUN</option>
+                <option >MON</option>
+                <option >TUE</option>
+                <option >WED</option>
+                <option >THU</option>
+                <option >FRI</option>
+                <option >SAT</option>
+                <option><% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
+                    <li><%= day %> </li>
+                   <%
+               }) %></option>
+            </select>
         </form>
-
-        <button id="submit-btn">SUBMIT</button>
-      </div>
+  
+        <a href = "/bookings.html"><button id="submit-btn">SUBMIT</button></a>
+  
     </div>
   </div>
 
