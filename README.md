@@ -11,13 +11,13 @@
 
 # Find a Table
 
-![Homepage of Burger Tracker](src/assets/screenshots/app_homepage.png "Burger Tracker Homepage")
+![Homepage of Find a Table](src/assets/screenshots/app_homepage.png "Find a Table Homepage")
 
 ## :wave: Welcome & Introductions!
 
-Welcome to the Burger Tracker repository! Do check out the project currently hosted right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
+Welcome to the Find a Table repository! Do check out the project currently hosted right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
 
-Burger Tracker is a web app with a finder and booking feature that specializes in looking for the best burger places in town! The features of this app utilizes numerous technical components including but not limited to, HTML5, CSS3, vanilla JS, DOM manipulations, APIs and more.
+Find a Table is a web app with a finder and booking feature that specializes in looking for the best burger places in town! The features of this app utilizes numerous technical components including but not limited to, HTML5, CSS3, vanilla JS, DOM manipulations, APIs and more.
 
 This project was created as part of the General Assembly software engineering immersive course to challenge us to work in a small team and to put the concepts we've learnt into practice by designing and building a full-stack web app from scratch.
 
@@ -81,11 +81,11 @@ Check out the app, get "meat-ed", and feedbacks on this project are always welco
 
 ## :camera_flash: Screenshots of the app
 
-#### Map Finder of Burger Tracker
-![Preview of the Map Finder feature](src/assets/screenshots/map_final.gif "Burger Tracker Map")
+#### Map Finder of Find a Table
+![Preview of the Map Finder feature](src/assets/screenshots/map_final.gif "Find a Table Map")
 <hr />
 
-#### Restaurant Details of Burger Tracker
+#### Restaurant Details of Find a Table
 ![Preview of the restaurant details page]()
 <hr />
 
