@@ -2,6 +2,7 @@
   <a href="#wave-welcome--introductions">Introductions</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#pushpin-objectives-of-the-project">Objectives</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#gear-technical-components">Technical Components</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#calling-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#inbox_tray-project-backlog">Backlog</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bookmark-attribution">Attribution</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#camera_flash-screenshots-of-the-game">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -42,13 +43,13 @@ Get "meat-ed" & feedbacks on this project are always welcome!
 * JS DOM Manipulations and Event Handling
 
 #### Backend (Node Dependencies)
-* Express.js 4.17.1
+* Express.js _**4.17.1**_
 
-* Axios 0.21.0
+* Axios _**0.21.0**_
 
-* Embedded JS Templates 3.1.5
+* Embedded JS Templates _**3.1.5**_
 
-* Node-PostgreSQL Database 8.5.0
+* Node-PostgreSQL Database _**8.5.0**_
 
 ## :calling: Features
 
@@ -63,6 +64,12 @@ Get "meat-ed" & feedbacks on this project are always welcome!
 * Utilize the data available from Google and create our own search results interface (opening times, restaurant images, etc.)
 
 * Implement a simple table booking system under the restaurant details page that connects to our database
+
+## :inbox_tray: Project Backlog
+
+* Displaying more than 20 search results upon accessing the map page
+
+* 
 
 ## :bookmark: Attribution
 
