@@ -1,6 +1,7 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-       #map {
+       #map,
+       #pano{
         height: 100%;
         -webkit-filter: grayscale(100%);
         filter: grayscale(60%);
@@ -51,6 +52,11 @@
         color: #fff;
       }
 
+      footer {
+        display: flex;
+        justify-content: right;
+      }
+
       .title {
         font-size: 90px;
         font-family: 'Righteous', cursive;
@@ -79,7 +85,6 @@
         display: grid;
         grid-template-columns: 1fr 3fr;
       }
-
 
       .restaurant-list-container{
         background-color:  #15B6D6;

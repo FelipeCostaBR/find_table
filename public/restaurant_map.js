@@ -15,10 +15,35 @@ function initMap() {
     heading: 90
   };
   map = new google.maps.Map(document.getElementById("map"), options);
+  const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), 
+  {
+    position: Sydney,
+    pov: {
+      heading: 34,
+      pitch: 30,
+    },
+    motionTracking: false,
+    notionTrackingControl: false
+  }
+  )
+  map.setStreetView(panorama)
 
   main();
 }
 map.setTilt(45)
+
+function initPano() {
+  const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'))
+}
+
+function toggleStreetView() {
+  const toggle = panorama.getVisible();
+  if (toggle == false) {
+    panorama.setVisible(true)
+  } else {
+    panorama.setVisible(false)
+  }
+}
 
 function addMarker(props) {
   var marker = new google.maps.Marker({
@@ -181,3 +206,8 @@ function autoRotate() {
 // types: (5) ["meal_takeaway", "restaurant", "food", "point_of_interest", "establishment"]
 // user_ratings_total: 223
 // vicinity: "Level 1 Shop 1103/120-200 Rosamond Rd, Maribyrnong"
+
+//res.data.result.reviews
+
+//res.data.result.reviews[0]
+// restaurantsInfo.reviews[0]
