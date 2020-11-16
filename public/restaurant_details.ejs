@@ -1,36 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./css/detail.css" />
-</head>
-<body>
+
+
+    <title>Find a table</title>
+    <link href="./css/detail.css" rel="stylesheet" type="text/css">
+  <body>
     <header>
         <div class="title">
-        <h2>RESTAURANT DETAILS</h2>
+        <h2><%= restaurantsInfo.name%></h2>
         </div>
-        <img class="logo" src="Burger_Finder.png" alt="logo">
+        <img class="logo" src="../src/assets/images/Burger_Finder.png" alt="logo">
         <nav>
             <button>HOME</button>
             <button>MAP</button>
         </nav>
     </header>
     
-
+  <!-- <%= restaurantsInfo.reviews[0].text %> 
+  <%= restaurantsInfo.reviews[0].rating %>  -->
     <div class="restaurant-images">
-        <img src="https://decisivecravings.com.au/wp-content/uploads/2015/08/Rocket-Coffee-Bar-counter-Cool-Cafes-in-Bangkok.jpg" alt="image">
-        <img src="https://apicms.thestar.com.my/uploads/images/2020/03/06/593265.jpg" alt="image">
-        <img src="https://i.pinimg.com/originals/03/ff/5d/03ff5d9b0dc90bf7b92aded46aa01538.jpg" alt="image">
+        <% restaurantsInfo.photos.forEach(photo => { %>
+             <img src="<%= `https://maps.googleapis.com/maps/api/place/photo?maxwidth=250&maxheight=250&photoreference=${photo.photo_reference}&key=AIzaSyABL4y3J8mON1Db0z4-C-ExwOSZ-W-VHrY` %> " alt="image"> 
+        <% }) %>
     </div>
 
+    <!-- https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=photo.photo_reference&key=AIzaSyABL4y3J8mON1Db0z4-C-ExwOSZ-W-VHrY -->
+  
     <div class="box-detailpage">
     <div class="small-box-detailpage">
-
+  
         <h3>OPENNING HOURS</h3>
         <div class="opening-hours-list">
-        <ul class="day-detailpage">
+        <!-- <ul class="day-detailpage">
             <li>SUN</li>
             <li>MON</li>
             <li>TUE</li>
@@ -38,44 +37,34 @@
             <li>THU</li>
             <li>FRI</li>
             <li>SAT</li>
-        </ul>
-
+        </ul> -->
+  
         <ul class="time-detailpage">
-            <li>8:00AM - 9:00PM</li>
-            <li>8:00AM - 9:00PM</li>
-            <li>8:00AM - 9:00PM</li>
-            <li>8:00AM - 9:00PM</li>
-            <li>8:00AM - 9:00PM</li>
-            <li>8:00AM - 9:00PM</li>
-            <li>8:00AM - 9:00PM</li>
+            <% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
+             <li><%= day %> </li>
+            <% }) %>
         </ul>
         </div>
-
-
+  
+  
         <h3>THE DETAILS</h3>
         <div class="details-detailpage">
         <h4>Type</h4>
-        <p>Outdoor Seating</p>
-        <h4>Cuisine</h4>
-        <p>Modern Australian</p>
-        <h4>Servings</h4>
-        <p>Breakfast</p>
-        <p>Lunch</p>
-        <p>Dinner</p>
+        <%= restaurantsInfo.types %> 
         </div>
     </div>
-
+  
     <div class="big-box-detailpage">
     <div class="detail-map">
         <img src="https://snazzy-maps-cdn.azureedge.net/assets/8007-black-and-white-without-labels.png?v=20170626071756" alt="map">
     </div>
-
+  
     <div class="description">
         <p>The crew from The Kettle Black and Top Paddock have opened up a new café in Melbourne’s CBD, and it’s even open evenings! Propped right on the corner of Little Bourke and Spencer Street, Higher Ground is upping the street cred of Melbourne’s café scene (not that is necessarily needs to). The café has an industrial feel, with the exposed brick walls contrasting the plants and light wooden tables.
-
+  
             But now to the serious stuff. The menu. Holding true to their signature hotcakes, the team have brought the ricotta hotcakes with maple syrup and fruits straight to Higher Ground. There’s also a lamb sausage roll and wagyu short rib roll for those who love their proteins.</p>
     </div>
-
+  
     <div class="booking-table">
         <form action="">
             <select name="" id="booking-time">
@@ -91,7 +80,7 @@
                 <option >5PM - 6PM</option>
             </select>
         </form>
-
+  
         <form action="">
             <select name="" id="booking-day">
                 <option >BOOK A DAY HERE</option>
@@ -104,19 +93,64 @@
                 <option >SAT</option>
             </select>
         </form>
-
+  
         <button id="submit-btn">SUBMIT</button>
-
+  
     </div>
     </div>
     </div>
-
+  
     <footer>
         <p>NOVEMBER 2020</p>
         
         CONTACT WITH US
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./restaurant_details.js"></script>
+    <!-- <script src="./restaurant_details.js"></script> -->
   </body>
-</html>
+  
+  
+  
+  <!-- {
+    html_attributions: [],
+    result: {
+      address_components: [
+        [Object], [Object],
+        [Object], [Object],
+        [Object], [Object],
+        [Object]
+      ],
+      adr_address: '<span class="street-address">255 Keilor Rd</span>, <span class="locality">Essendon</span> <span class="region">VIC</span> <span class="postal-code">3040</span>, <span class="country-name">Australia</span>',
+      business_status: 'OPERATIONAL',
+      formatted_address: '255 Keilor Rd, Essendon VIC 3040, Australia',
+      formatted_phone_number: '(03) 7018 3501',
+      geometry: { location: [Object], viewport: [Object] },
+      icon: 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png',
+      international_phone_number: '+61 3 7018 3501',
+      name: 'Beats Burgers',
+      opening_hours: { open_now: false, periods: [Array], weekday_text: [Array] },
+      photos: [
+        [Object], [Object],
+        [Object], [Object],
+        [Object], [Object],
+        [Object], [Object],
+        [Object], [Object]
+      ],
+      place_id: 'ChIJJSZ3b3Nc1moRXeCp7gaSIzc',
+      plus_code: {
+        compound_code: '7V6W+7R Essendon VIC, Australia',
+        global_code: '4RJ67V6W+7R'
+      },
+      rating: 4.2,
+      reference: 'ChIJJSZ3b3Nc1moRXeCp7gaSIzc',
+      reviews: [ [Object], [Object], [Object], [Object], [Object] ],
+      types: [ 'restaurant', 'food', 'point_of_interest', 'establishment' ],
+      url: 'https://maps.google.com/?cid=3973179854742478941',
+      user_ratings_total: 195,
+      utc_offset: 660,
+      vicinity: '255 Keilor Road, Essendon',
+      website: 'http://www.beatsburgers.com.au/'
+    },
+    status: 'OK'
+  }
+  -->
