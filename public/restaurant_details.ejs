@@ -87,6 +87,21 @@
         </iframe>
       </div>
       <div class="booking-table">
+        <!-- <form action="">
+          <select name="" id="booking-time">
+            <option>BOOK A DAY HERE</option>
+            <%array = []%>
+            <%arrayday =["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]%>
+            
+            <% restaurantsInfo.opening_hours.periods.forEach(day => { %>
+                <%i=1%>
+                <option><%=arrayday[day.open.day] %> </option>
+                <%array.push(day)%>
+                <% i++ %>
+                <% }) %>
+          </select>
+        </form> -->
+
         <form action="">
             <select name="" id="booking-day">
                 <option >BOOK A TIME HERE</option>
