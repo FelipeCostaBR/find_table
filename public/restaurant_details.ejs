@@ -27,7 +27,7 @@
     <div class="box-detailpage">
     <div class="small-box-detailpage">
   
-        <h3>OPENNING HOURS</h3>
+        <h3>OPENING HOURS</h3>
         <div class="opening-hours-list">
         <!-- <ul class="day-detailpage">
             <li>SUN</li>
@@ -42,7 +42,8 @@
         <ul class="time-detailpage">
             <% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
              <li><%= day %> </li>
-            <% }) %>
+            <%
+        }) %>
         </ul>
         </div>
   
@@ -104,7 +105,7 @@
             </select>
         </form>
   
-        <button id="submit-btn">SUBMIT</button>
+        <a href = "/bookings.html"><button id="submit-btn">SUBMIT</button></a>
   
     </div>
     </div>
