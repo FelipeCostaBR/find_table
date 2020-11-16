@@ -1,4 +1,4 @@
-<style>
+
   /******************************************
 /* BASE STYLES
 /*******************************************/
@@ -7,29 +7,15 @@ body {
     margin: 5%;
 }
 
-.restaurant-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    background-color: black;
-    color: cornsilk;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    margin: 40px; 
-    border-radius: 20px;
-    box-shadow: #111 0 0 20px;
-  }
- .restaurant-images img {
-    width: 100%;
-} 
+
 
 /******************************************
 /* GRIDS STYLES
 /*******************************************/
-  .opening-hours-list {
+  /* .opening-hours-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
+  } */
   .small-box-detailpage {
     
   }
@@ -45,18 +31,21 @@ body {
 
   ul {
     list-style-type: none;
-    padding: 12%; 
+    padding: 20px; 
+    
   }
 
   li {
     padding: 10px;
-    color: gray;
+    color: rgb(218, 218, 218);
+    background-color: #693e4b;
+    font-family: Helvetica, Arial, sans-serif;
   }
   li:hover{
       color: black;
   }
   .details-detailpage {
-    padding: 10%;
+    padding: 5px;
     color: gray;
   }
   .details-detailpage:hover {
@@ -64,13 +53,10 @@ body {
       background-color: #c8c8c8;
   }
 
-  .description {
-      padding: 10%;
-      font-size: 20px;
-      color: rgb(73, 73, 73);
-  }
+  
   h4 {
       color: black;
+      font-family: Helvetica, Arial, sans-serif;
   }
 
   /******************************************
@@ -139,9 +125,9 @@ body {
 
 
 .detail-map {
-    margin: 30px 20px 10px 150px;
-    width: 48%;
-    border: 2px solid #693e4b;
+    margin: 50px 20px 10px 150px;
+    width: 50%;
+    background-color: rgb(213, 225, 233);
     border-radius: 10px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(85%);
@@ -155,11 +141,13 @@ body {
     border-radius: 10px;
     color: black;
     margin: 10px;
-    padding: 1px;
+    
     padding-left: 20px;
+    font-size: 30px;
+    font-family: helvetica, arial, sans-serif;
 }
 .logo {
-    width: 60px;
+    width: 100px;
     margin-left: 20px;
     
     
@@ -179,6 +167,7 @@ nav {
 }
 h3 {
     margin: 30px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /******************************************
@@ -194,10 +183,23 @@ footer {
     color: gray;
 }
 footer img {
-    position: relative;
-    right: 20px;
-    bottom: 20px;
+    
+    width: 50px;
+    margin: 10px 10px 10px 20px;
 }
 
+/******************************************
+/* SLIDE SHOW
+/*******************************************/
+.restaurant-images {
+    background-color: black;
+    margin: 40px; 
+    border-radius: 20px;
+    box-shadow: #111 0 0 20px;
+  }
+  
 
-</style>
+#carousel-container {
+    display: flex;
+    justify-content: center;
+}
