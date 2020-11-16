@@ -10,8 +10,60 @@
       html,
       body {
         height: 100%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
         padding: 0;
+      }
+
+
+      p {
+        font-size: 20px;
+        font-family: 'Righteous', cursive;
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      nav {
+          float: center;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+        border-bottom: 1px solid black;
+      }
+
+      nav ul li {
+        font-size: 40px;
+        font-family: 'Righteous', cursive;
+        font-weight: lighter;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .title {
+        font-size: 90px;
+        font-family: 'Righteous', cursive;
+        font-weight: lighter;
+      }
+
+      .logo-container {
+        height: 200px;
+        float: right;
+      }
+
+      .logo-container img {
+        height: 17%;
+        position: absolute;
+        border-right: 70px;
       }
 
       .map-container{
@@ -21,15 +73,8 @@
         grid-template-columns: 1fr 3fr;
       }
 
-
-      .restaurant-list-container{
-        background-color:  #15B6D6;
-        overflow: auto;
-        max-height: 100vh;
-      }
-      
-      .restaurant-list {
-        background-color: #2ea9c2;
+      .restaurant-details {
+        background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%)
       }
 
       
