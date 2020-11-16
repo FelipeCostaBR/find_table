@@ -30,9 +30,15 @@ function addMarker(props) {
      var infoWindow = new google.maps.InfoWindow({
         content: props.name
       })
-      marker.addListener('click', () => {
-        infoWindow.open(props.map, marker)
-      })
+      
+        marker.addListener('mouseover', () => {
+          infoWindow.open(props.map, marker)
+        
+        })
+        marker.addListener('mouseout' , () => {
+          infoWindow.close()
+        })
+        
     }
 }
 
