@@ -1,6 +1,10 @@
 {
   "name": "find_table",
   "version": "1.0.0",
+  "engines": {
+    "node": "15.x",
+    "npm": "6.x"
+  },
   "description": "",
   "main": "routes.js",
   "scripts": {
@@ -24,6 +28,5 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
-  },
-  "description": ""
+  }
 }
