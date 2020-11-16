@@ -1,6 +1,7 @@
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-       #map {
+       #map,
+       #pano{
         height: 100%;
         -webkit-filter: grayscale(100%);
         filter: grayscale(60%);
@@ -10,8 +11,73 @@
       html,
       body {
         height: 100%;
+        width: 100%;
         margin: 0 auto;
         padding: 0;
+        background-color: black;
+      }
+
+
+      p {
+        font-size: 20px;
+        font-family: 'Righteous', cursive;
+        font-weight: lighter;
+        text-align: center;
+        color: #fff;
+      }
+
+      nav {
+          float: center;
+      }
+
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: auto;
+        margin-right: auto;
+        list-style: none;
+        border-bottom: 1px solid #fff;
+      }
+
+      nav ul li {
+        font-size: 40px;
+        font-family: 'Righteous', cursive;
+        font-weight: lighter;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+      }
+
+      .title {
+        font-size: 90px;
+        font-family: 'Righteous', cursive;
+        font-weight: lighter;
+        color: #fff;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .logo-container {
+        height: 200px;
+        float: right;
+      }
+
+      .logo-container img {
+        height: 17%;
+        position: absolute;
+        border-right: 70px;
       }
 
       .map-container{
@@ -21,18 +87,14 @@
         grid-template-columns: 1fr 3fr;
       }
 
-
       .restaurant-list-container{
         background-color:  #15B6D6;
-        overflow: auto;
-        max-height: 100vh;
+        
       }
       
       .restaurant-list {
         background-color: #2ea9c2;
       }
-
-      
 
       .gm-style-iw-d {
         background-color: rgb(223, 223, 223);
