@@ -4,13 +4,13 @@
   "description": "",
   "main": "routes.js",
   "scripts": {
-    "start": "nodemon -q main"
+    "start": "node routes.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FelipeCostaBR/find_table.git"
   },
-  "keywords": [],
+  "keywords": ["heroku"],
   "author": "",
   "license": "ISC",
   "bugs": {
