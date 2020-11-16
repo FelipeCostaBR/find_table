@@ -10,11 +10,15 @@ function initMap() {
   let options = {
     center: { lat: -12.7502038, lng: 14.8621315 }, // set a default
     zoom: 13,
+    mapTypeId: "satellite",
+    tilt: 45,
+    heading: 90
   };
   map = new google.maps.Map(document.getElementById("map"), options);
 
   main();
 }
+map.setTilt(45)
 
 function addMarker(props) {
   var marker = new google.maps.Marker({
@@ -126,3 +130,54 @@ function main() {
       });
   });
 }
+
+// function init() {
+//     const Sydney = { lat: -33.868820, lng: 151.209290 }
+//     const map = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 4,
+//         mapTypeId: "satellite",
+//         center: Sydney,
+//         heading: 90,
+//         tilt: 45
+//     })
+//     map.setTilt(45)
+
+//     const string = '<p>Sample text about how appealing Sydney is.</p>'
+//     const infoWindow = new google.maps.Infowindow({ content: string })
+//     const marker = new google.maps.Marker({
+//         position: Sydney,
+//         map,
+//         title: 'Sydney'
+//     });
+//     marker.addEventListener('click', () => {
+//         infoWindow.open(map, marker);
+//     });
+// }
+
+function rotate90() {
+    const heading = map.getHeading() || 0;
+    map.setHeading(heading + 90);
+}
+
+function autoRotate() {
+    if (map.Tilt() !==0) {
+        window.setInterval(rotate90, 3000);
+    }
+}
+
+
+// business_status: "OPERATIONAL"
+// geometry: {location: {…}, viewport: {…}}
+// icon: "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png"
+// name: "RocoMamas"
+// opening_hours: {open_now: true}
+// photos: [{…}]
+// place_id: "ChIJkQGqdRZp1moRcr3nAEBbLAA"
+// plus_code: {compound_code: "6VGQ+PP Maribyrnong, Victoria", global_code: "4RJ66VGQ+PP"}
+// price_level: 2
+// rating: 4.5
+// reference: "ChIJkQGqdRZp1moRcr3nAEBbLAA"
+// scope: "GOOGLE"
+// types: (5) ["meal_takeaway", "restaurant", "food", "point_of_interest", "establishment"]
+// user_ratings_total: 223
+// vicinity: "Level 1 Shop 1103/120-200 Rosamond Rd, Maribyrnong"

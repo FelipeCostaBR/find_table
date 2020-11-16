@@ -142,8 +142,11 @@ body {
     width: 48%;
     border: 2px solid #693e4b;
     border-radius: 10px;
+<<<<<<< HEAD
     -webkit-filter: grayscale(100%);
     filter: grayscale(85%);
+=======
+>>>>>>> f000e60... map alteration
 }
  /******************************************
 /* HEADER STYLE

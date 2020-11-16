@@ -11,7 +11,7 @@
       body {
         height: 100%;
         width: 100%;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
         background-color: black;
       }
@@ -80,8 +80,14 @@
         grid-template-columns: 1fr 3fr;
       }
 
-      .restaurant-details {
-        background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%)
+
+      .restaurant-list-container{
+        background-color:  #15B6D6;
+        
+      }
+      
+      .restaurant-list {
+        background-color: #2ea9c2;
       }
 
       
