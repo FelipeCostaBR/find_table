@@ -33,7 +33,7 @@ function addMarker(props) {
       content: props.name,
     });
     // listening for a click in the market to open the specific infoWindow
-    marker.addListener("click", () => {
+    marker.addListener("mouseover", () => {
       infoWindow.open(props.map, marker);
     });
 
@@ -43,17 +43,6 @@ function addMarker(props) {
   }
 }
 
-// function restaurantDetails() {
-//   const infoWindow = document.querySelector(".gm-style-iw-d");
-//   infoWindow.addEventListener("click", (event) => {
-//     const place_id = event.target.dataset.id
-//     // axios.post(`/restaurant/details/${place_id}`)
-//     // .then(response => {
-//     //   axios.get(`/restaurant.info`)
-//     // })
-
-//   });
-// }
 
 function restaurantDetailsForm(restaurant) {
   return `<form action="/restaurant/details/${restaurant.place_id}">
@@ -62,6 +51,7 @@ function restaurantDetailsForm(restaurant) {
             </button>
           </form>`;
 }
+
 
 function getPosition() {
   // Simple wrapper
