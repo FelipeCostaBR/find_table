@@ -65,6 +65,10 @@ function addMarker(props) {
     marker.addListener("mouseover", () => {
       infoWindow.open(props.map, marker);
     });
+
+    // marker.addListener('mouseout' , () => {
+    //   infoWindow.close()
+    // })
     // google.maps.event.addListener(infoWindow, "domready", function () {
     //   restaurantDetails();
     // });

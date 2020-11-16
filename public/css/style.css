@@ -97,8 +97,17 @@
       .restaurant-list {
         background-color: #0c0f0f;
         color: #fff;
+        border: 1px white solid;
+        margin: 1rem;
+      }
+      .restaurant-list p {
+        font-size: 1rem;
+        margin: 0 auto;
       }
 
+/*******************************************
+      the info window style
+      ***************************************/
       .gm-style-iw-d {
         background-color: rgb(223, 223, 223);
         color: #693e4b;
@@ -110,10 +119,20 @@
         border-radius: 10px;
       }
 
-      
+      .gm-style-iw.gm-style-iw-c {
+        background-color: #693e4b;
+        box-shadow: #111 0 0 20px;
+       transition: all 2s;
+      }
 
-      
-      
+
+      button.gm-ui-hover-effect {
+        color: white;
+      }
+
+      button {
+        background-color: #693e4b;
+      }
       
 
     
