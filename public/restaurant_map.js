@@ -8,15 +8,14 @@ let iconImage =
   "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
 
 function initMap() {
-  
   let options = {
     center: { lat: -12.7502038, lng: 14.8621315 }, // set a default
     zoom: 13,
     tilt: 45,
-    heading: 90
+    heading: 90,
   };
   map = new google.maps.Map(document.getElementById("map"), options);
-  
+
   main();
 }
 function addMarker(props) {
@@ -35,12 +34,12 @@ function addMarker(props) {
     var infoWindow = new google.maps.InfoWindow({
       content: props.name,
     });
-    infoWindows.push(infoWindow)
+    infoWindows.push(infoWindow);
     // listening for a click in the market to open the specific infoWindow
     marker.addListener("mouseover", () => {
-      infoWindows.forEach(w => {
-        w.close() 
-      })
+      infoWindows.forEach((w) => {
+        w.close();
+      });
       infoWindow.open(props.map, marker);
     });
   }
@@ -75,11 +74,11 @@ function createRestaurantList(restaurant) {
   let openNow = document.createElement("p");
   openNow.className = "restaurant-open-now";
   if (restaurant.opening_hours.open_now) {
-    openNow.innerHTML = `Open now 😋`;  
+    openNow.innerHTML = `Open now 😋`;
   } else {
-    openNow.innerHTML = `Close 🥺`;  
+    openNow.innerHTML = `Close 🥺`;
   }
-  
+
   let rating = document.createElement("p");
   rating.className = "restaurant-rating";
   rating.innerHTML = `Rating: ${restaurant.rating}`;
