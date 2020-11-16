@@ -43,16 +43,8 @@ function addMarker(props) {
       })
       infoWindow.open(props.map, marker);
     });
-
-    // marker.addListener('mouseout' , () => {
-    //   infoWindow.close()
-    // })
-    // google.maps.event.addListener(infoWindow, "domready", function () {
-    //   restaurantDetails();
-    // });
   }
 }
-
 
 function restaurantDetailsForm(restaurant) {
   return `<form action="/restaurant/details/${restaurant.place_id}">
@@ -62,9 +54,7 @@ function restaurantDetailsForm(restaurant) {
           </form>`;
 }
 
-
 function getPosition() {
-  // Simple wrapper
   return new Promise((res, rej) => {
     navigator.geolocation.getCurrentPosition(res, rej, {
       enableHighAccuracy: true,
@@ -90,7 +80,6 @@ function createRestaurantList(restaurant) {
     openNow.innerHTML = `Close 🥺`;  
   }
   
-
   let rating = document.createElement("p");
   rating.className = "restaurant-rating";
   rating.innerHTML = `Rating: ${restaurant.rating}`;
@@ -107,7 +96,6 @@ function createRestaurantList(restaurant) {
 
 // wait for getPosition to complete
 function main() {
-
   getPosition().then((res) => {
     const { latitude, longitude } = res.coords;
     // change the map location to the current user using browser GPS
