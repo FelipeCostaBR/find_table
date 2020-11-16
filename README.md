@@ -5,13 +5,13 @@
   <a href="#calling-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#inbox_tray-project-backlog">Backlog</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bookmark-attribution">Attribution</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#camera_flash-screenshots-of-the-game">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#camera_flash-screenshots-of-the-app">Screenshots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-disclaimer">Disclaimer</a>
 </p>
 
 # Find a Table
 
-![Homepage of Find a Table](src/assets/screenshots/app_homepage.png "Find a Table Homepage")
+![App preview of Find a Table](src/assets/screenshots/Find_TableCOMPLETE.gif "Find a Table Demo")
 
 ## :wave: Welcome & Introductions!
 
@@ -81,12 +81,12 @@ Check out the app, get "meat-ed", and feedbacks on this project are always welco
 
 ## :camera_flash: Screenshots of the app
 
-#### Map Finder of Find a Table
-![Preview of the Map Finder feature](src/assets/screenshots/map_final.gif "Find a Table Map")
+#### Homepage of Find a Table
+![Preview of the Map Finder feature](src/assets/screenshots/app_homepage.png "Homepage")
 <hr />
 
 #### Restaurant Details of Find a Table
-![Preview of the restaurant details page]()
+![Preview of the restaurant details page](src/assets/screenshots/map_final.png "The Map Finder")
 <hr />
 
 ## :memo: Disclaimer
