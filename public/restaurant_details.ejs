@@ -30,7 +30,7 @@
       <div class="opening-hours-list">
         <ul class="time-detailpage">
           <% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
-          <li><%= day %></li>
+          <li><%= day %> </li>
           <% }) %>
         </ul>
       </div>
@@ -103,50 +103,4 @@
     CONTACT WITH US
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <!-- <script src="./restaurant_details.js"></script> -->
 </body>
-
-<!-- restaurantInfo obj 
-    {
-    html_attributions: [],
-    result: {
-      address_components: [
-        [Object], [Object],
-        [Object], [Object],
-        [Object], [Object],
-        [Object]
-      ],
-      adr_address: '<span class="street-address">255 Keilor Rd</span>, <span class="locality">Essendon</span> <span class="region">VIC</span> <span class="postal-code">3040</span>, <span class="country-name">Australia</span>',
-      business_status: 'OPERATIONAL',
-      formatted_address: '255 Keilor Rd, Essendon VIC 3040, Australia',
-      formatted_phone_number: '(03) 7018 3501',
-      geometry: { location: [Object], viewport: [Object] },
-      icon: 'https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png',
-      international_phone_number: '+61 3 7018 3501',
-      name: 'Beats Burgers',
-      opening_hours: { open_now: false, periods: [Array], weekday_text: [Array] },
-      photos: [
-        [Object], [Object],
-        [Object], [Object],
-        [Object], [Object],
-        [Object], [Object],
-        [Object], [Object]
-      ],
-      place_id: 'ChIJJSZ3b3Nc1moRXeCp7gaSIzc',
-      plus_code: {
-        compound_code: '7V6W+7R Essendon VIC, Australia',
-        global_code: '4RJ67V6W+7R'
-      },
-      rating: 4.2,
-      reference: 'ChIJJSZ3b3Nc1moRXeCp7gaSIzc',
-      reviews: [ [Object], [Object], [Object], [Object], [Object] ],
-      types: [ 'restaurant', 'food', 'point_of_interest', 'establishment' ],
-      url: 'https://maps.google.com/?cid=3973179854742478941',
-      user_ratings_total: 195,
-      utc_offset: 660,
-      vicinity: '255 Keilor Road, Essendon',
-      website: 'http://www.beatsburgers.com.au/'
-    },
-    status: 'OK'
-  }
-  -->
