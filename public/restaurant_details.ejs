@@ -26,7 +26,7 @@
   </div>
   <div class="box-detailpage">
     <div class="small-box-detailpage">
-      <h3>OPENNING HOURS</h3>
+      <h3>OPENING HOURS</h3>
       <div class="opening-hours-list">
         <ul class="time-detailpage">
           <% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
@@ -64,39 +64,51 @@
         </iframe>
       </div>
       <div class="booking-table">
-        <form action="">
+        <!-- <form action="">
           <select name="" id="booking-time">
-            <option>BOOK A TIME HERE</option>
-            <option>8AM - 9AM</option>
-            <option>10AM - 11AM</option>
-            <option>11AM - 12PM</option>
-            <option>12PM - 1PM</option>
-            <option>1PM - 2PM</option>
-            <option>2PM - 3PM</option>
-            <option>3PM - 4PM</option>
-            <option>4PM - 5PM</option>
-            <option>5PM - 6PM</option>
+            <option>BOOK A DAY HERE</option>
+            <%array = []%>
+            <%arrayday =["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]%>
+            
+            <% restaurantsInfo.opening_hours.periods.forEach(day => { %>
+                <%i=1%>
+                <option><%=arrayday[day.open.day] %> </option>
+                <%array.push(day)%>
+                <% i++ %>
+                <% }) %>
+            <%console.log(array)%>
+            <%console.log(parseInt(array[0].close.time)+100)%>
+
+            
+
           </select>
-        </form>
+        </form> -->
 
         <form action="">
             <select name="" id="booking-day">
-                <option >BOOK A DAY HERE</option>
-                <option >SUN</option>
-                <option >MON</option>
-                <option >TUE</option>
-                <option >WED</option>
-                <option >THU</option>
-                <option >FRI</option>
-                <option >SAT</option>
-                <option><% restaurantsInfo.opening_hours.weekday_text.forEach(day => { %>
-                    <li><%= day %> </li>
-                   <%
-               }) %></option>
+                <option >BOOK A TIME HERE</option>
+                <%d =new Date()%>
+                <%inc = "100"%>
+                <%i=0%>
+                <% restaurantsInfo.opening_hours.periods.forEach(day => { %>
+                    
+                    <option><%=arrayday[i] + " " + d.setTime(day.open.time)%></option>
+                    <%for (j=1;j<8;j++) {%>
+                        <option><%= arrayday[i] + " " + (d.setTime(day.open.time) +j*100)%></option>
+                   <% }%>
+                    
+                    <%i+=1%>
+                    <% }) %>               
+                
             </select>
         </form>
-  
-        <a href = "/bookings.html"><button id="submit-btn">SUBMIT</button></a>
+        <script>
+           function confirmbooking(){
+				alert("Hello! Your booking is confirmed at " + document.querySelector("h2").outerText+" "+document.getElementById("booking-day").value +". We will send the confirmation email from our server using SMTP in future.");
+			}
+        </script>
+       <button id="submit-btn" onclick="confirmbooking()">SUBMIT</button>
+      
   
     </div>
   </div>
