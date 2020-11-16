@@ -8,7 +8,7 @@
   <a href="#memo-disclaimer">Disclaimer</a>
 </p>
 
-# App Name here
+# Find a Table
 
 ![Design preview of ](images/screenshots/filename.png)
 
