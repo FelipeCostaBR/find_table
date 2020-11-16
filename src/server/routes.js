@@ -20,6 +20,7 @@ app.post('/api/user_location',(request, response) => {
     // parameters is user current location
     restaurantsLocation(latitude,longitude).then(res => {
         // add restaurants tables, use place_id as key
+        console.log(res.data)
         response.json(res.data)
     })
 })

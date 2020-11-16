@@ -67,7 +67,17 @@
 
     <div class="big-box-detailpage">
     <div class="detail-map">
-        <img src="https://snazzy-maps-cdn.azureedge.net/assets/8007-black-and-white-without-labels.png?v=20170626071756" alt="map">
+         <!-- the &q should be the place we need
+        It accepts a location as either a place name, address, or place ID. -->
+        <iframe
+            width="600"
+            height="450"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBS3C4jLmXkVC7pUgctJFnx4piQF41gN5Y
+                &q=Space+Needle,Seattle+WA" 
+            style="https://developers.google.com/maps/documentation/javascript/styling#styled_map_wizard"
+                allowfullscreen>
+        </iframe>
     </div>
 
     <div class="description">
