@@ -10,9 +10,9 @@ function initMap() {
   let options = {
     center: { lat: -12.7502038, lng: 14.8621315 }, // set a default
     zoom: 13,
-    mapTypeId: "satellite",
-    // tilt: 45,
-    // heading: 90
+    // mapTypeId: "satellite",
+    tilt: 45,
+    heading: 90
   };
   map = new google.maps.Map(document.getElementById("map"), options);
   const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), 
@@ -179,16 +179,16 @@ function main() {
 //     });
 // }
 
-function rotate90() {
-    const heading = map.getHeading() || 0;
-    map.setHeading(heading + 90);
-}
+// function rotate90() {
+//     const heading = map.getHeading() || 0;
+//     map.setHeading(heading + 90);
+// }
 
-function autoRotate() {
-    if (map.Tilt() !==0) {
-        window.setInterval(rotate90, 3000);
-    }
-}
+// function autoRotate() {
+//     if (map.Tilt() !==0) {
+//         window.setInterval(rotate90, 3000);
+//     }
+// }
 
 
 // business_status: "OPERATIONAL"
