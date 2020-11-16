@@ -11,8 +11,8 @@ function initMap() {
     center: { lat: -12.7502038, lng: 14.8621315 }, // set a default
     zoom: 13,
     mapTypeId: "satellite",
-    tilt: 45,
-    heading: 90
+    // tilt: 45,
+    // heading: 90
   };
   map = new google.maps.Map(document.getElementById("map"), options);
   const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), 
@@ -23,7 +23,7 @@ function initMap() {
       pitch: 30,
     },
     motionTracking: false,
-    notionTrackingControl: false
+    motionTrackingControl: false
   }
   )
   map.setStreetView(panorama)
@@ -32,18 +32,18 @@ function initMap() {
 }
 map.setTilt(45)
 
-function initPano() {
-  const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'))
-}
+// function initPano() {
+//   const panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'))
+// }
 
-function toggleStreetView() {
-  const toggle = panorama.getVisible();
-  if (toggle == false) {
-    panorama.setVisible(true)
-  } else {
-    panorama.setVisible(false)
-  }
-}
+// function toggleStreetView() {
+//   const toggle = panorama.getVisible();
+//   if (toggle == false) {
+//     panorama.setVisible(true)
+//   } else {
+//     panorama.setVisible(false)
+//   }
+// }
 
 function addMarker(props) {
   var marker = new google.maps.Marker({

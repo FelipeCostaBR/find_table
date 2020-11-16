@@ -54,13 +54,14 @@
 
       footer {
         display: flex;
-        justify-content: right;
+        justify-content: center;
       }
 
       .title {
         font-size: 90px;
         font-family: 'Righteous', cursive;
         font-weight: lighter;
+        color: #fff;
       }
 
       .image-container {
@@ -94,8 +95,6 @@
       .restaurant-list {
         background-color: #2ea9c2;
       }
-
-      
 
       .gm-style-iw-d {
         background-color: rgb(223, 223, 223);
