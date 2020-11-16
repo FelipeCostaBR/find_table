@@ -4,7 +4,7 @@
   "description": "",
   "main": "routes.js",
   "scripts": {
-    "start": "nodemon routes.js"
+    "start": "node routes.js"
   },
   "repository": {
     "type": "git",
