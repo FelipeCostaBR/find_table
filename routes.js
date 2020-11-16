@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const path = require('path');
+const path = require("path");
+
 
 app.use(express.static(path.join(__dirname,'/public'))); 
 
@@ -27,10 +28,12 @@ app.post('/api/user_location',(request, response) => {
 })
 
 app.get('/restaurant/details/:place_id',(request, response) => { 
+    
     const { place_id } = request.params
     if(!place_id.includes('.')){
        // parameters is place id from front-end
        restaurantsDetails(place_id).then(res => {
+       
            response.render('restaurant_details',{restaurantsInfo: res.data.result})
        })
     }
