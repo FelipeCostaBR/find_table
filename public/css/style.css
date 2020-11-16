@@ -85,15 +85,17 @@
         height: 100vh;
         display: grid;
         grid-template-columns: 1fr 3fr;
+        
       }
 
       .restaurant-list-container{
-        background-color:  #15B6D6;
+        background-color:  black;
+        color: white;
         
       }
       
       .restaurant-list {
-        background-color: #2ea9c2;
+        background-color: black;
       }
 
       .gm-style-iw-d {
