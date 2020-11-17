@@ -15,7 +15,7 @@
 
 ## :wave: Welcome & Introductions!
 
-Welcome to the Find a Table repository! Do check out the project currently hosted right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
+Welcome to the Find a Table repository! Do check out the deployed web app right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
 
 Find a Table is a web app with a finder and booking feature that specializes in looking for the best burger places in town! The features of this app utilizes numerous technical components including but not limited to, HTML5, CSS3, vanilla JS, DOM manipulations, APIs and more.
 
