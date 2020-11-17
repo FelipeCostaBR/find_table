@@ -11,11 +11,11 @@
 
 # Find a Table
 
-![App preview of Find a Table](src/assets/screenshots/Find_TableCOMPLETE.gif "Find a Table Demo")
+![App preview of Find a Table](src/assets/screenshots/find_table.gif "Find a Table Demo")
 
 ## :wave: Welcome & Introductions!
 
-Welcome to the Find a Table repository! Do check out the project currently hosted right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
+Welcome to the Find a Table repository! Do check out the deployed web app right **_[here](https://findatableapp.herokuapp.com/ "Burger Tracker")_**.
 
 Find a Table is a web app with a finder and booking feature that specializes in looking for the best burger places in town! The features of this app utilizes numerous technical components including but not limited to, HTML5, CSS3, vanilla JS, DOM manipulations, APIs and more.
 
@@ -82,11 +82,11 @@ Check out the app, get "meat-ed", and feedbacks on this project are always welco
 ## :camera_flash: Screenshots of the app
 
 #### Homepage of Find a Table
-![Preview of the Map Finder feature](src/assets/screenshots/app_homepage.png "Homepage")
+![Preview of the app homepage](src/assets/screenshots/app_homepage.png "Homepage")
 <hr />
 
-#### Restaurant Details of Find a Table
-![Preview of the restaurant details page](src/assets/screenshots/map_final.png "The Map Finder")
+#### Restaurant Finder Map of Find a Table
+![Preview of the map finder page](src/assets/screenshots/map_final.gif "The Map Finder")
 <hr />
 
 ## :memo: Disclaimer
