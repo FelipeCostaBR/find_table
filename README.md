@@ -11,7 +11,7 @@
 
 # Find a Table
 
-![App preview of Find a Table](src/assets/screenshots/Find_TableCOMPLETE.gif "Find a Table Demo")
+![App preview of Find a Table](src/assets/screenshots/find_table.gif "Find a Table Demo")
 
 ## :wave: Welcome & Introductions!
 
@@ -82,11 +82,11 @@ Check out the app, get "meat-ed", and feedbacks on this project are always welco
 ## :camera_flash: Screenshots of the app
 
 #### Homepage of Find a Table
-![Preview of the Map Finder feature](src/assets/screenshots/app_homepage.png "Homepage")
+![Preview of the app homepage](src/assets/screenshots/app_homepage.png "Homepage")
 <hr />
 
-#### Restaurant Details of Find a Table
-![Preview of the restaurant details page](src/assets/screenshots/map_final.png "The Map Finder")
+#### Restaurant Finder Map of Find a Table
+![Preview of the map finder page](src/assets/screenshots/map_final.gif "The Map Finder")
 <hr />
 
 ## :memo: Disclaimer
